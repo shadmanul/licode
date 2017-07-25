@@ -14,6 +14,21 @@ You have two options to start using Licode:
 More info at:
 http://www.lynckia.com/licode
 
+## Build your own image and run the container from it
+
+You have to git clone Licode's code from GitHub and navigate to docker directory. There, to compile your own image just run:
+```
+sudo docker build -t licode-image .
+```
+This builds a new Docker image following the steps in Dockerfile and saves it in your local Docker repository with the name licode-image. You can check the available images in your local repository using:
+```
+sudo docker images
+```
+Now you can run a new container from the image you have just created with:
+```
+MIN_PORT=30000; MAX_PORT=30050; docker container run --rm --name licode -p  3000:3000 -p $MIN_PORT-$MAX_PORT: $MIN_PORT-$MAX_PORT/udp -p 3001:3001  -p 8000:8080 -e "MIN_PORT=$MIN_PORT" -e "MAX_PORT=$MAX_PORT" -e "PUBLIC_IP=139.59.248.179" licode-image
+```
+
 ## License
 
 The MIT License
