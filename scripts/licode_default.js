@@ -63,7 +63,7 @@ config.erizoController.networkinterface = ''; //default value: ''
 // This configuration is used by the clients to reach erizoController
 // Use '' to use the public IP address instead of a hostname
 config.erizoController.hostname = 'dikkha.gdn'; //default value: ''
-config.erizoController.port = 8080; //default value: 8080
+config.erizoController.port = 443; //default value: 8080
 // Use true if clients communicate with erizoController over SSL
 config.erizoController.ssl = true; //default value: false
 
