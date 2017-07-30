@@ -36,7 +36,7 @@ const Socket = (newIo) => {
       reconnect: false,
       secure: token.secure,
       forceNew: true,
-      transports: ['websocket'],
+      // transports: ['websocket'],
       rejectUnauthorized: false,
     };
     const transport = token.secure ? 'wss://' : 'ws://';
