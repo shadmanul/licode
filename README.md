@@ -26,7 +26,7 @@ sudo docker images
 ```
 Now you can run a new container from the image you have just created with:
 ```
-MIN_PORT=30000; MAX_PORT=30050; sudo docker run --name licode -v /home/conneczodev/extras:/home/conneczodev/extras -p  3000:3000 -p $MIN_PORT-$MAX_PORT:$MIN_PORT-$MAX_PORT/udp -p 3001:3001  -p 8080:8080 -e "MIN_PORT=$MIN_PORT" -e "MAX_PORT=$MAX_PORT" -e "PUBLIC_IP=128.199.74.227" licode-image
+MIN_PORT=30000; MAX_PORT=30050; sudo docker container run --rm --name licode -v /home/conneczodev/extras:/home/conneczodev/extras -p  3000:3000 -p $MIN_PORT-$MAX_PORT:$MIN_PORT-$MAX_PORT/udp -p 3001:3001  -p 8080:8080 -e "MIN_PORT=$MIN_PORT" -e "MAX_PORT=$MAX_PORT" -e "PUBLIC_IP=128.199.74.227" licode-image
 ```
 
 ## License
